@@ -1,13 +1,37 @@
-# LLM MCP Intern Assignment
+🚀 LLM + MCP: Smart Image Processing Orchestration
+This project showcases how to integrate a Large Language Model (LLM) with a Modular Command Processor (MCP) to coordinate multiple services for automated image processing tasks.
 
-This solution demonstrates how to use an LLM with MCP to orchestrate services for image processing missions.
+⚙️ Setup Instructions
+Clone the repository
 
-## Installation
+bash
+Copy
+Edit
+git clone <your-repo-url>
+cd <your-repo-folder>
+Install dependencies
 
-1. Clone this repository
-2. run pip install -r requirements
-3. run python main.py
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Run the app
 
-4.change the promt in main if you want another example
-5.I had to add the pictures manually, change the time frame according to yours.
-6.add a .env file and add your OPENAI_API_KEY
+bash
+Copy
+Edit
+python main.py
+🧠 Customize Your Mission
+✏️ Change the prompt:
+Modify the prompt in main.py to experiment with different mission types.
+
+🖼️ Add your own images:
+Images must be placed manually in the appropriate folder. Update the time range in the prompt or service accordingly.
+
+🔐 Set your API key:
+Create a .env file and add your OpenAI API key:
+
+ini
+Copy
+Edit
+OPENAI_API_KEY=your-key-here
