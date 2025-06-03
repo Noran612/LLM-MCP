@@ -5,8 +5,8 @@ This solution demonstrates how to use an LLM with MCP to orchestrate services fo
 ## Installation
 
 1. Clone this repository
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+2. run pip install -r requirements
+3. run python main.py
+
+4.change the promt in main if you want another example
+5.I had to add the pictures manually, change the time frame according to yours.

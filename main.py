@@ -75,7 +75,7 @@ class MissionProcessor:
             model="gpt-3.5-turbo",
             input=[{"role": "system", "content": prompt}]
         )
-        #print("Mission parsed successfully:", response.output_text)
+        print("Mission parsed successfully:", response.output_text)
         try:
             return eval(response.output_text)
         except:
@@ -117,10 +117,18 @@ class MissionProcessor:
 async def main():
     processor = MissionProcessor()
     
-    # Example mission
-    mission = "detect all cars in images between 11:00 and 11:05"
+    # Store test images first
+    image_paths = ["car1.jpg", "car2.jpg", "car3.jpg","cat1.jpg"]  # Update with your actual filenames
+    for img_path in image_paths:
+        if os.path.exists(img_path):
+            img_id = processor.image_db.store_image(img_path)
+            print(f"Stored image: {img_path} with ID: {img_id}")
+        else:
+            print(f"Warning: Image not found - {img_path}")
     
-    print(f"Executing mission: {mission}")
+    # Then execute mission
+    mission = "detect all cars in images between 12:00 and 13:35"
+    print(f"\nExecuting mission: {mission}")
     result = await processor.execute_mission(mission)
     
     print("\nMission Results:")
