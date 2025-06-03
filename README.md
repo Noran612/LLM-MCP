@@ -1,37 +1,62 @@
-🚀 LLM + MCP: Smart Image Processing Orchestration
-This project showcases how to integrate a Large Language Model (LLM) with a Modular Command Processor (MCP) to coordinate multiple services for automated image processing tasks.
+markdown
+# 🚀 LLM-MCP: AI-Powered Mission Control Platform
 
-⚙️ Setup Instructions
-Clone the repository
+**Automated mission execution using LLM planning & computer vision**  
+*"Detect cars in images with natural language commands"*
+
+## 🔥 Features
+
+- **Natural Language Processing**: Describe missions in plain English
+- **YOLO Object Detection**: Real-time car detection in images
+- **Image Database**: Store and query images with timestamps
+- **Modular Architecture**: Easily add new services
+- **AI Orchestration**: Automatic service chaining
+
+## 🛠️ Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/LLM-MCP.git
+   cd LLM-MCP
+Install dependencies:
 
 bash
-Copy
-Edit
-git clone <your-repo-url>
-cd <your-repo-folder>
-Install dependencies
-
-bash
-Copy
-Edit
 pip install -r requirements.txt
-Run the app
+Add your OpenAI API key:
 
 bash
-Copy
-Edit
+echo "OPENAI_API_KEY=your_api_key_here" > .env
+🚦 Quick Start
+Add sample images to the database:
+
+python
+# Place car1.jpg, car2.jpg, car3.jpg in project root
+Run the mission processor:
+
+bash
 python main.py
-🧠 Customize Your Mission
-✏️ Change the prompt:
-Modify the prompt in main.py to experiment with different mission types.
+Example output:
 
-🖼️ Add your own images:
-Images must be placed manually in the appropriate folder. Update the time range in the prompt or service accordingly.
+Stored image: car1.jpg with ID: abc123_2023-11-15T12:00:00
+Executing mission: detect all cars in images between 12:00 and 13:05
+Mission Results:
+- Image with cars found: abc123_2023-11-15T12:00:00
+🧩 Service Architecture
 
-🔐 Set your API key:
-Create a .env file and add your OpenAI API key:
+![deepseek_mermaid_20250603_5f172a](https://github.com/user-attachments/assets/88063117-a8ab-420d-af23-63af4e1b7443)
 
-ini
-Copy
-Edit
-OPENAI_API_KEY=your-key-here
+
+
+
+
+📂 File Structure
+LLM-MCP/
+├── Services/
+│   ├── image_db.py       # Image database service
+│   └── yolo_detector.py  # Object detection service
+├── mcp/
+│   ├── orchestrator.py   # Service coordination
+│   └── service_registry.py
+├── main.py              # Mission processor
+├── requirements.txt     # Dependencies
+└── README.md
