@@ -10,3 +10,4 @@ This solution demonstrates how to use an LLM with MCP to orchestrate services fo
 
 4.change the promt in main if you want another example
 5.I had to add the pictures manually, change the time frame according to yours.
+6.add a .env file and add your OPENAI_API_KEY
